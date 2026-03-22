@@ -50,12 +50,12 @@ def get_github_bounties():
 
 def get_fallback_opportunities():
     return [
-        {"title": "Google Summer of Code 2026 — ML Track", "org": "Google", "type": "Open Source", "prize": "$3,000–$6,600", "match": 94, "badge": "New", "time": "just now"},
-        {"title": "Acumen Fellows Program", "org": "Acumen", "type": "Fellowship", "prize": "Fully Funded", "match": 88, "badge": "Hot", "time": "2m ago"},
-        {"title": "Stripe Open Source Grant", "org": "Stripe", "type": "Grant", "prize": "$5,000", "match": 91, "badge": "Closing", "time": "5m ago"},
-        {"title": "NASA Open Source Contributor", "org": "NASA", "type": "Internship", "prize": "$4,500", "match": 85, "badge": "New", "time": "8m ago"},
-        {"title": "MLH Fellowship — Spring 2026", "org": "MLH", "type": "Fellowship", "prize": "$5,000 stipend", "match": 96, "badge": "Hot", "time": "12m ago"},
-        {"title": "UN Youth Climate Innovation Grant", "org": "United Nations", "type": "Grant", "prize": "$10,000", "match": 79, "badge": "New", "time": "15m ago"},
+        {"title": "Google Summer of Code 2026 — ML Track", "org": "Google", "type": "Open Source", "prize": "$3,000–$6,600", "match": 94, "badge": "New", "time": "just now", "link": "https://summerofcode.withgoogle.com"},
+        {"title": "Acumen Fellows Program", "org": "Acumen", "type": "Fellowship", "prize": "Fully Funded", "match": 88, "badge": "Hot", "time": "2m ago", "link": "https://acumen.org/fellowships"},
+        {"title": "Stripe Open Source Grant", "org": "Stripe", "type": "Grant", "prize": "$5,000", "match": 91, "badge": "Closing", "time": "5m ago", "link": "https://stripe.com/open-source"},
+        {"title": "NASA Open Source Contributor", "org": "NASA", "type": "Internship", "prize": "$4,500", "match": 85, "badge": "New", "time": "8m ago", "link": "https://code.nasa.gov"},
+        {"title": "MLH Fellowship — Spring 2026", "org": "MLH", "type": "Fellowship", "prize": "$5,000 stipend", "match": 96, "badge": "Hot", "time": "12m ago", "link": "https://fellowship.mlh.io"},
+        {"title": "UN Youth Climate Innovation Grant", "org": "United Nations", "type": "Grant", "prize": "$10,000", "match": 79, "badge": "New", "time": "15m ago", "link": "https://www.un.org/youth"},
     ]
 
 def get_all_opportunities():

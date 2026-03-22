@@ -339,7 +339,7 @@ function renderCards(opps){
       <div class="card-top"><span class="card-org">${o.org}</span><span class="card-badge badge-${o.badge}">${o.badge}</span></div>
       <p class="card-title">${o.title}</p>
       <p class="card-meta">${o.type} · ${o.prize}</p>
-      <div class="card-footer"><span class="card-match">${o.match}% match</span><a class="apply-link" href="${o.link||'#'}" target="_blank" onclick="event.stopPropagation()">Apply →</a></div>
+      <div class="card-footer"><span class="card-match">${o.match}% match</span><a class="apply-link" href="${o.link&&o.link!='#'?o.link:'javascript:void(0)'}" target="_blank" target="_blank" onclick="event.stopPropagation()">Apply →</a></div>
     </div>`;
   });
 }
@@ -367,8 +367,7 @@ function renderOppsPage(){
       <p class="card-title">${o.title}</p>
       <p class="card-org">${o.org}</p>
       <p class="card-prize">${o.prize}</p>
-      <a class="apply-btn" href="${o.link||'#'}" target="_blank">Apply Now →</a>
-    </div>`;
+      <a class="apply-btn" href="https://www.google.com/search?q=${encodeURIComponent(o.title+' '+o.org+' apply')}" target="_blank" rel="noopener">Apply Now →</a>    </div>`;
   });
 }
 
