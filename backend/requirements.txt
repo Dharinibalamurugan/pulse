@@ -1,0 +1,7 @@
+flask>=3.0.0
+flask-socketio
+flask-cors
+requests
+beautifulsoup4
+apscheduler
+eventlet
