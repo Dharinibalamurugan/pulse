@@ -2,11 +2,10 @@ from flask import Flask, jsonify, send_from_directory
 from flask_socketio import SocketIO
 from flask_cors import CORS
 from apscheduler.schedulers.background import BackgroundScheduler
-from scraper import get_all_opportunities
 import eventlet
-import os
-
 eventlet.monkey_patch()
+from scraper import get_all_opportunities
+import os
 
 app = Flask(__name__, static_folder='../frontend')
 CORS(app)
@@ -40,4 +39,4 @@ scheduler.start()
 if __name__ == "__main__":
     refresh_opportunities()
     print("Pulse server running on http://localhost:5000")
-    socketio.run(app, debug=True, port=5000)
+    socketio.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
