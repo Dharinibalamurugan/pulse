@@ -10,10 +10,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{--white:#ffffff;--off:#f5f4f1;--dark:#0e0e0e;--mid:#6b6b6b;--accent:#7c6af7;--accent2:#f472b6;--border:rgba(0,0,0,0.08);}
 body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--dark);overflow-x:hidden;}
-.page{display:none;}
-.page.active{display:block;}
-
-/* NAV */
+.page{display:none;}.page.active{display:block;}
 nav{display:flex;align-items:center;justify-content:space-between;padding:20px 48px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);z-index:100;}
 .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;cursor:pointer;}
 .logo span{color:var(--accent);}
@@ -23,9 +20,6 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:20px 4
 .nav-right{display:flex;align-items:center;gap:16px;}
 .btn-ghost{font-size:13px;color:var(--mid);background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;}
 .btn-primary{font-size:13px;background:var(--dark);color:white;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:500;}
-.btn-primary:hover{background:#333;}
-
-/* HERO */
 .hero{min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 48px 0;}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--off);border:1px solid var(--border);border-radius:99px;padding:6px 14px;font-size:12px;color:var(--mid);margin-bottom:32px;font-weight:500;}
 .hero-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:blink 1.5s infinite;}
@@ -35,18 +29,12 @@ h1 em{font-style:normal;color:var(--accent);}
 .hero-sub{font-size:17px;color:var(--mid);max-width:480px;line-height:1.7;margin-bottom:40px;font-weight:300;}
 .hero-actions{display:flex;gap:12px;margin-bottom:60px;}
 .btn-big{padding:14px 28px;background:var(--dark);color:white;border:none;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;}
-.btn-big:hover{background:#333;}
 .btn-outline{padding:14px 28px;background:transparent;color:var(--dark);border:1px solid rgba(0,0,0,0.15);border-radius:8px;font-size:15px;cursor:pointer;font-family:'DM Sans',sans-serif;}
-.btn-outline:hover{background:var(--off);}
-
-/* SECTIONS */
-.section{padding:100px 48px;}
+.section{padding:80px 48px;}
 .section-label{font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:16px;}
 .section h2{font-family:'Syne',sans-serif;font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-2px;line-height:1.05;margin-bottom:50px;}
-
-/* CARDS */
 .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.opp-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;transition:transform 0.3s,box-shadow 0.3s;position:relative;overflow:hidden;}
+.opp-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;transition:transform 0.3s,box-shadow 0.3s;position:relative;overflow:hidden;cursor:pointer;}
 .opp-card:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(0,0,0,0.08);}
 .opp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
 .opp-card.purple::before{background:linear-gradient(90deg,#7c6af7,#a78bfa);}
@@ -64,8 +52,6 @@ h1 em{font-style:normal;color:var(--accent);}
 .card-match{font-size:12px;font-weight:500;color:var(--accent);}
 .apply-link{font-size:12px;font-weight:600;color:var(--accent);text-decoration:none;padding:6px 12px;border:1px solid var(--accent);border-radius:6px;transition:all 0.2s;}
 .apply-link:hover{background:var(--accent);color:white;}
-
-/* LIVE SECTION */
 .live-section{background:var(--off);border-radius:24px;padding:48px;margin:0 48px 80px;}
 .live-header{display:flex;align-items:center;gap:10px;margin-bottom:28px;}
 .live-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:blink 1.5s infinite;}
@@ -80,38 +66,28 @@ h1 em{font-style:normal;color:var(--accent);}
 .feed-right{text-align:right;}
 .feed-prize{font-size:13px;font-weight:600;}
 .feed-time{font-size:11px;color:var(--mid);}
-
-/* STATS */
 .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0 48px 100px;}
 .stat-box{text-align:center;padding:40px 20px;border:1px solid var(--border);border-radius:20px;}
 .stat-num{font-family:'Syne',sans-serif;font-size:48px;font-weight:800;letter-spacing:-2px;margin-bottom:8px;}
 .stat-label{font-size:14px;color:var(--mid);}
-
-/* STATUS BAR */
 .status-bar{position:fixed;bottom:20px;right:20px;background:var(--dark);color:white;padding:10px 18px;border-radius:99px;font-size:12px;display:flex;align-items:center;gap:8px;z-index:999;}
 .status-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:blink 1.5s infinite;}
-
-/* FOOTER */
 footer{padding:40px 48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
 .footer-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;}
 .footer-logo span{color:var(--accent);}
 .footer-copy{font-size:13px;color:var(--mid);}
-
-/* AUTH PAGE */
 .auth-page{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--off);}
 .auth-box{background:white;border-radius:20px;padding:48px;width:100%;max-width:420px;border:1px solid var(--border);}
 .auth-box h2{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;margin-bottom:8px;}
 .auth-box p{color:var(--mid);font-size:14px;margin-bottom:32px;}
 .form-group{margin-bottom:20px;}
-.form-group label{display:block;font-size:13px;font-weight:500;margin-bottom:8px;color:var(--dark);}
+.form-group label{display:block;font-size:13px;font-weight:500;margin-bottom:8px;}
 .form-group input{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color 0.2s;}
 .form-group input:focus{border-color:var(--accent);}
 .btn-full{width:100%;padding:14px;background:var(--dark);color:white;border:none;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:8px;}
 .btn-full:hover{background:#333;}
 .auth-switch{text-align:center;margin-top:20px;font-size:13px;color:var(--mid);}
-.auth-switch a{color:var(--accent);cursor:pointer;text-decoration:none;font-weight:500;}
-
-/* PROFILE PAGE */
+.auth-switch a{color:var(--accent);cursor:pointer;font-weight:500;}
 .profile-page{max-width:700px;margin:60px auto;padding:0 24px;}
 .profile-page h2{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;margin-bottom:8px;}
 .profile-page p{color:var(--mid);margin-bottom:40px;}
@@ -122,30 +98,22 @@ footer{padding:40px 48px;border-top:1px solid var(--border);display:flex;justify
 .skill-chip:hover{border-color:var(--accent);color:var(--accent);}
 .skill-chip.selected{background:var(--accent);color:white;border-color:var(--accent);}
 .save-btn{margin-top:32px;padding:14px 32px;background:var(--dark);color:white;border:none;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;}
-.save-btn:hover{background:#333;}
-
-/* OPPORTUNITIES PAGE */
 .opps-page{padding:60px 48px;}
 .opps-page h2{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;margin-bottom:8px;}
 .opps-page .subtitle{color:var(--mid);margin-bottom:40px;}
-.opps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;}
+.opps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
 .opp-full-card{background:white;border:1px solid var(--border);border-radius:16px;padding:24px;transition:transform 0.2s,box-shadow 0.2s;}
 .opp-full-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.08);}
 .opp-full-card .card-title{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;}
 .opp-full-card .card-org{font-size:12px;color:var(--mid);margin-bottom:12px;}
-.opp-full-card .card-prize{font-size:18px;font-weight:700;color:var(--accent);margin-bottom:12px;}
+.opp-full-card .card-prize{font-size:20px;font-weight:700;color:var(--accent);margin-bottom:16px;}
 .opp-full-card .card-type{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--off);color:var(--mid);margin-bottom:16px;}
 .opp-full-card .apply-btn{display:block;width:100%;padding:12px;background:var(--dark);color:white;border:none;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;text-align:center;text-decoration:none;font-family:'DM Sans',sans-serif;transition:background 0.2s;}
 .opp-full-card .apply-btn:hover{background:var(--accent);}
-
-/* USER GREETING */
-.user-greeting{font-size:13px;color:var(--mid);display:none;}
-.user-greeting span{color:var(--dark);font-weight:600;}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="logo" onclick="showPage('home')">pulse<span>.</span></div>
   <ul class="nav-links">
@@ -154,20 +122,17 @@ footer{padding:40px 48px;border-top:1px solid var(--border);display:flex;justify
     <li><a onclick="showPage('profile')">My Profile</a></li>
   </ul>
   <div class="nav-right">
-    <span class="user-greeting" id="user-greeting">Hi, <span id="user-name-display"></span></span>
+    <span id="user-greeting" style="display:none;font-size:13px;color:var(--mid)">Hi, <strong id="user-name-display"></strong></span>
     <button class="btn-ghost" id="signin-btn" onclick="showPage('signin')">Sign in</button>
     <button class="btn-primary" id="signup-btn" onclick="showPage('signup')">Get early access</button>
     <button class="btn-ghost" id="signout-btn" style="display:none" onclick="signOut()">Sign out</button>
   </div>
 </nav>
 
-<!-- HOME PAGE -->
+<!-- HOME -->
 <div class="page active" id="page-home">
   <section class="hero">
-    <div class="hero-tag">
-      <span class="hero-dot"></span>
-      <span id="live-label">Connecting to live feed...</span>
-    </div>
+    <div class="hero-tag"><span class="hero-dot"></span><span id="live-label">Connecting to live feed...</span></div>
     <h1>Every opportunity.<br><em>Before</em> it's gone.</h1>
     <p class="hero-sub">The real-time feed that shows every scholarship, hackathon, internship and fellowship the moment it goes live — matched to who you actually are.</p>
     <div class="hero-actions">
@@ -175,13 +140,11 @@ footer{padding:40px 48px;border-top:1px solid var(--border);display:flex;justify
       <button class="btn-outline" onclick="showPage('opportunities')">See live feed</button>
     </div>
   </section>
-
   <section class="section">
     <p class="section-label">Matched to you</p>
     <h2>Not a list. Your feed.</h2>
     <div class="cards-grid" id="cards-grid"></div>
   </section>
-
   <div class="live-section">
     <div class="live-header">
       <div class="live-dot"></div>
@@ -190,64 +153,47 @@ footer{padding:40px 48px;border-top:1px solid var(--border);display:flex;justify
     </div>
     <div id="feed-container"></div>
   </div>
-
   <div class="stats-row">
     <div class="stat-box"><p class="stat-num" style="color:var(--accent);">200+</p><p class="stat-label">Sources tracked globally</p></div>
     <div class="stat-box"><p class="stat-num" style="color:#f472b6;">&lt;1s</p><p class="stat-label">From posted to your feed</p></div>
     <div class="stat-box"><p class="stat-num" style="color:#2dd4bf;">0</p><p class="stat-label">GPA requirements to use Pulse</p></div>
   </div>
-
   <footer>
     <div class="footer-logo">pulse<span>.</span></div>
     <p class="footer-copy">Built for every student. Not just the connected ones.</p>
   </footer>
 </div>
 
-<!-- SIGN IN PAGE -->
+<!-- SIGN IN -->
 <div class="page" id="page-signin">
   <div class="auth-page">
     <div class="auth-box">
       <h2>Welcome back</h2>
       <p>Sign in to see your matched opportunities.</p>
-      <div class="form-group">
-        <label>Your name</label>
-        <input type="text" id="signin-name" placeholder="e.g. Dharani">
-      </div>
-      <div class="form-group">
-        <label>Email address</label>
-        <input type="email" id="signin-email" placeholder="you@example.com">
-      </div>
+      <div class="form-group"><label>Your name</label><input type="text" id="signin-name" placeholder="e.g. Dharani"></div>
+      <div class="form-group"><label>Email address</label><input type="email" id="signin-email" placeholder="you@example.com"></div>
       <button class="btn-full" onclick="signIn()">Sign in →</button>
-      <div class="auth-switch">Don't have an account? <a onclick="showPage('signup')">Sign up</a></div>
+      <div class="auth-switch">No account? <a onclick="showPage('signup')">Sign up free</a></div>
     </div>
   </div>
 </div>
 
-<!-- SIGN UP PAGE -->
+<!-- SIGN UP -->
 <div class="page" id="page-signup">
   <div class="auth-page">
     <div class="auth-box">
       <h2>Join Pulse</h2>
       <p>Get matched to opportunities the moment they go live.</p>
-      <div class="form-group">
-        <label>Your name</label>
-        <input type="text" id="signup-name" placeholder="e.g. Dharani">
-      </div>
-      <div class="form-group">
-        <label>Email address</label>
-        <input type="email" id="signup-email" placeholder="you@example.com">
-      </div>
-      <div class="form-group">
-        <label>College / University</label>
-        <input type="text" id="signup-college" placeholder="e.g. Rajalakshmi Engineering College">
-      </div>
+      <div class="form-group"><label>Your name</label><input type="text" id="signup-name" placeholder="e.g. Dharani"></div>
+      <div class="form-group"><label>Email address</label><input type="email" id="signup-email" placeholder="you@example.com"></div>
+      <div class="form-group"><label>College / University</label><input type="text" id="signup-college" placeholder="e.g. Anna University"></div>
       <button class="btn-full" onclick="signUp()">Create account →</button>
       <div class="auth-switch">Already have an account? <a onclick="showPage('signin')">Sign in</a></div>
     </div>
   </div>
 </div>
 
-<!-- PROFILE PAGE -->
+<!-- PROFILE -->
 <div class="page" id="page-profile">
   <div class="profile-page">
     <h2>Your Profile</h2>
@@ -265,8 +211,6 @@ footer{padding:40px 48px;border-top:1px solid var(--border);display:flex;justify
         <span class="skill-chip" data-skill="ai">AI</span>
         <span class="skill-chip" data-skill="open source">Open Source</span>
         <span class="skill-chip" data-skill="git">Git</span>
-        <span class="skill-chip" data-skill="api">API</span>
-        <span class="skill-chip" data-skill="azure">Azure</span>
       </div>
     </div>
     <div class="skill-section">
@@ -279,177 +223,152 @@ footer{padding:40px 48px;border-top:1px solid var(--border);display:flex;justify
         <span class="skill-chip" data-skill="business">Business</span>
       </div>
     </div>
-    <button class="save-btn" onclick="saveProfile()">Save & Find Opportunities →</button>
+    <button class="save-btn" onclick="saveProfile()">Save and Find Opportunities</button>
   </div>
 </div>
 
-<!-- OPPORTUNITIES PAGE -->
+<!-- OPPORTUNITIES -->
 <div class="page" id="page-opportunities">
   <div class="opps-page">
     <h2>Live Opportunities</h2>
-    <p class="subtitle" id="opps-subtitle">Showing all opportunities — <a onclick="showPage('profile')" style="color:var(--accent);cursor:pointer;">set your skills</a> to see matches.</p>
+    <p class="subtitle">All opportunities updating in real time.</p>
     <div class="opps-grid" id="opps-grid"></div>
   </div>
 </div>
 
-<!-- STATUS BAR -->
 <div class="status-bar">
   <div class="status-dot"></div>
   <span id="status-text">Connecting...</span>
 </div>
 
 <script>
-const COLORS = ['purple','pink','teal'];
-const ICONS = ['🚀','💡','🧠','🌍','⚡','🎯','🔥','💎'];
-const ICON_BGS = ['#ede9fe','#fce7f3','#dcfce7','#dbeafe','#fef3c7'];
+const COLORS=['purple','pink','teal'];
+const ICONS=['🚀','💡','🧠','🌍','⚡','🎯','🔥','💎'];
+const BGS=['#ede9fe','#fce7f3','#dcfce7','#dbeafe','#fef3c7'];
+let allOpps=[];
+let feedCount=0;
+let currentUser=JSON.parse(localStorage.getItem('pulse_user')||'null');
 
-let allOpps = [];
-let feedCount = 0;
-let currentUser = JSON.parse(localStorage.getItem('pulse_user') || 'null');
-
-// Check if user is logged in
-function updateNav() {
-  if (currentUser) {
-    document.getElementById('user-greeting').style.display = 'flex';
-    document.getElementById('user-name-display').textContent = currentUser.name;
-    document.getElementById('signin-btn').style.display = 'none';
-    document.getElementById('signup-btn').style.display = 'none';
-    document.getElementById('signout-btn').style.display = 'block';
+function updateNav(){
+  if(currentUser){
+    document.getElementById('user-greeting').style.display='inline';
+    document.getElementById('user-name-display').textContent=currentUser.name;
+    document.getElementById('signin-btn').style.display='none';
+    document.getElementById('signup-btn').style.display='none';
+    document.getElementById('signout-btn').style.display='block';
   } else {
-    document.getElementById('user-greeting').style.display = 'none';
-    document.getElementById('signin-btn').style.display = 'block';
-    document.getElementById('signup-btn').style.display = 'block';
-    document.getElementById('signout-btn').style.display = 'none';
+    document.getElementById('user-greeting').style.display='none';
+    document.getElementById('signin-btn').style.display='block';
+    document.getElementById('signup-btn').style.display='block';
+    document.getElementById('signout-btn').style.display='none';
   }
 }
 
-function showPage(page) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-' + page).classList.add('active');
-  window.scrollTo(0, 0);
-  if (page === 'opportunities') renderOppsPage();
+function showPage(page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+page).classList.add('active');
+  window.scrollTo(0,0);
+  if(page==='opportunities') renderOppsPage();
 }
 
-function signUp() {
-  const name = document.getElementById('signup-name').value.trim();
-  const email = document.getElementById('signup-email').value.trim();
-  const college = document.getElementById('signup-college').value.trim();
-  if (!name || !email) { alert('Please fill in your name and email!'); return; }
-  currentUser = { name, email, college, skills: ['python'] };
-  localStorage.setItem('pulse_user', JSON.stringify(currentUser));
+function signUp(){
+  const name=document.getElementById('signup-name').value.trim();
+  const email=document.getElementById('signup-email').value.trim();
+  const college=document.getElementById('signup-college').value.trim();
+  if(!name||!email){alert('Please fill in your name and email!');return;}
+  currentUser={name,email,college,skills:['python']};
+  localStorage.setItem('pulse_user',JSON.stringify(currentUser));
   updateNav();
   showPage('profile');
 }
 
-function signIn() {
-  const name = document.getElementById('signin-name').value.trim();
-  const email = document.getElementById('signin-email').value.trim();
-  if (!name || !email) { alert('Please fill in your name and email!'); return; }
-  currentUser = { name, email, skills: JSON.parse(localStorage.getItem('pulse_user') || '{}').skills || ['python'] };
-  localStorage.setItem('pulse_user', JSON.stringify(currentUser));
+function signIn(){
+  const name=document.getElementById('signin-name').value.trim();
+  const email=document.getElementById('signin-email').value.trim();
+  if(!name||!email){alert('Please fill in your name and email!');return;}
+  const saved=JSON.parse(localStorage.getItem('pulse_user')||'{}');
+  currentUser={name,email,skills:saved.skills||['python']};
+  localStorage.setItem('pulse_user',JSON.stringify(currentUser));
   updateNav();
   showPage('opportunities');
 }
 
-function signOut() {
-  currentUser = null;
+function signOut(){
+  currentUser=null;
   localStorage.removeItem('pulse_user');
   updateNav();
   showPage('home');
 }
 
-function saveProfile() {
-  const selected = [...document.querySelectorAll('.skill-chip.selected')].map(c => c.dataset.skill);
-  if (selected.length === 0) { alert('Please select at least one skill!'); return; }
-  if (currentUser) {
-    currentUser.skills = selected;
-    localStorage.setItem('pulse_user', JSON.stringify(currentUser));
-  }
+function saveProfile(){
+  const selected=[...document.querySelectorAll('.skill-chip.selected')].map(c=>c.dataset.skill);
+  if(selected.length===0){alert('Please select at least one skill!');return;}
+  if(currentUser){currentUser.skills=selected;localStorage.setItem('pulse_user',JSON.stringify(currentUser));}
   showPage('opportunities');
 }
 
-// Skill chip toggle
-document.querySelectorAll('.skill-chip').forEach(chip => {
-  chip.addEventListener('click', () => chip.classList.toggle('selected'));
+document.querySelectorAll('.skill-chip').forEach(chip=>{
+  chip.addEventListener('click',()=>chip.classList.toggle('selected'));
 });
 
-// Socket connection
-const socket = io('https://pulse-hjuf.onrender.com');
+const socket=io('https://pulse-hjuf.onrender.com');
 
-socket.on('connect', () => {
-  document.getElementById('status-text').textContent = 'Live — receiving opportunities';
-  document.getElementById('live-label').textContent = 'Live opportunities updating now';
+socket.on('connect',()=>{
+  document.getElementById('status-text').textContent='Live — receiving opportunities';
+  document.getElementById('live-label').textContent='Live opportunities updating now';
 });
 
-socket.on('disconnect', () => {
-  document.getElementById('status-text').textContent = 'Reconnecting...';
+socket.on('disconnect',()=>{
+  document.getElementById('status-text').textContent='Reconnecting...';
 });
 
-socket.on('new_opportunities', (opps) => {
-  allOpps = opps;
-  feedCount += opps.length;
-  document.getElementById('opp-count').textContent = feedCount + ' opportunities tracked';
-  renderCards(opps.slice(0, 3));
+socket.on('new_opportunities',(opps)=>{
+  allOpps=opps;
+  feedCount+=opps.length;
+  document.getElementById('opp-count').textContent=feedCount+' opportunities tracked';
+  renderCards(opps.slice(0,3));
   renderFeed(opps);
   renderOppsPage();
 });
 
-function renderCards(opps) {
-  const grid = document.getElementById('cards-grid');
-  grid.innerHTML = '';
-  opps.forEach((o, i) => {
-    const color = COLORS[i % COLORS.length];
-    grid.innerHTML += `
-      <div class="opp-card ${color}" onclick="showPage('opportunities')" style="cursor:pointer">
-        <div class="card-top">
-          <span class="card-org">${o.org}</span>
-          <span class="card-badge badge-${o.badge}">${o.badge}</span>
-        </div>
-        <p class="card-title">${o.title}</p>
-        <p class="card-meta">${o.type} · ${o.prize}</p>
-        <div class="card-footer">
-          <span class="card-match">${o.match}% match</span>
-          <a class="apply-link" href="${o.link || '#'}" target="_blank" onclick="event.stopPropagation()">Apply →</a>
-        </div>
-      </div>`;
+function renderCards(opps){
+  const grid=document.getElementById('cards-grid');
+  grid.innerHTML='';
+  opps.forEach((o,i)=>{
+    grid.innerHTML+=`<div class="opp-card ${COLORS[i%COLORS.length]}" onclick="showPage('opportunities')">
+      <div class="card-top"><span class="card-org">${o.org}</span><span class="card-badge badge-${o.badge}">${o.badge}</span></div>
+      <p class="card-title">${o.title}</p>
+      <p class="card-meta">${o.type} · ${o.prize}</p>
+      <div class="card-footer"><span class="card-match">${o.match}% match</span><a class="apply-link" href="${o.link||'#'}" target="_blank" onclick="event.stopPropagation()">Apply →</a></div>
+    </div>`;
   });
 }
 
-function renderFeed(opps) {
-  const feed = document.getElementById('feed-container');
-  feed.innerHTML = '';
-  opps.slice(0, 5).forEach((o, i) => {
-    const icon = ICONS[i % ICONS.length];
-    const bg = ICON_BGS[i % ICON_BGS.length];
-    const div = document.createElement('div');
-    div.className = 'feed-item';
-    div.innerHTML = `
-      <div class="feed-icon" style="background:${bg}">${icon}</div>
-      <div class="feed-body">
-        <p class="feed-title">${o.title}</p>
-        <p class="feed-sub">${o.org} · ${o.type}</p>
-      </div>
-      <div class="feed-right">
-        <p class="feed-prize">${o.prize}</p>
-        <p class="feed-time">${o.time}</p>
-      </div>`;
+function renderFeed(opps){
+  const feed=document.getElementById('feed-container');
+  feed.innerHTML='';
+  opps.slice(0,5).forEach((o,i)=>{
+    const div=document.createElement('div');
+    div.className='feed-item';
+    div.innerHTML=`<div class="feed-icon" style="background:${BGS[i%BGS.length]}">${ICONS[i%ICONS.length]}</div>
+      <div class="feed-body"><p class="feed-title">${o.title}</p><p class="feed-sub">${o.org} · ${o.type}</p></div>
+      <div class="feed-right"><p class="feed-prize">${o.prize}</p><p class="feed-time">${o.time}</p></div>`;
     feed.appendChild(div);
   });
 }
 
-function renderOppsPage() {
-  const grid = document.getElementById('opps-grid');
-  if (allOpps.length === 0) { grid.innerHTML = '<p style="color:var(--mid)">Loading opportunities...</p>'; return; }
-  grid.innerHTML = '';
-  allOpps.forEach((o, i) => {
-    grid.innerHTML += `
-      <div class="opp-full-card">
-        <span class="card-type">${o.type}</span>
-        <p class="card-title">${o.title}</p>
-        <p class="card-org">${o.org}</p>
-        <p class="card-prize">${o.prize}</p>
-        <a class="apply-btn" href="${o.link || '#'}" target="_blank">Apply Now →</a>
-      </div>`;
+function renderOppsPage(){
+  const grid=document.getElementById('opps-grid');
+  if(allOpps.length===0){grid.innerHTML='<p style="color:var(--mid)">Loading opportunities...</p>';return;}
+  grid.innerHTML='';
+  allOpps.forEach((o,i)=>{
+    grid.innerHTML+=`<div class="opp-full-card">
+      <span class="card-type">${o.type}</span>
+      <p class="card-title">${o.title}</p>
+      <p class="card-org">${o.org}</p>
+      <p class="card-prize">${o.prize}</p>
+      <a class="apply-btn" href="${o.link||'#'}" target="_blank">Apply Now →</a>
+    </div>`;
   });
 }
 
